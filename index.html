@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta http-equiv="refresh" content="30">
+    <link rel="icon" href="favicon.ico">
+
+		<title>jeletians</title>
+		<link rel="stylesheet" href="styles.css">
+		</head>
+		<body>
+<div class="main">
+  
+  <header id="header">
+    
+    <div class="logo">
+      <img
+        id="header-img"
+        alt="Ankits logo"
+        src="https://lh3.googleusercontent.com/a-/AOh14Gie6aEHWEXrJDRIiJhk5vFvGTEOoVeIoHm2h3oC0A=s96-c-rg-br100"
+      />
+    </div>
+    
+    <nav id="nav-bar">
+      <ul>
+        <li><a class="nav-link" href="#features">Features</a></li>
+        <li><a class="nav-link" href="#how-it-works">How It Works</a></li>
+        <li><a class="nav-link" href="#pricing">Pricing</a></li>
+        <li><a class="nav-link" href="#Buy-UC">Buy UC</a></li>
+        <li><a class="nav-link" href="#Download-BGMI">Download BGMI</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="form">
+        <h2>AM's Gaming, home-made masterpieces</h2>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            name="email"
+            id="email"
+            required
+          />
+        <input id="submit" type="submit" value="Get Started" />
+        </form>
+    </div>
+  
+  <div id="features">
+     <div class="card">
+      <div class="icon"><i class="fa fa-3x fa-fire"></i></div>
+      <div class="content">
+        <h2>Premium Materials</h2>
+        <p>
+         Increase popularity in one click and follow .
+        </p>
+      </div>
+    </div>
+    
+     <div class="card">
+      <div class="icon"><i class="fa fa-3x fa-truck"></i></div>
+      <div class="content">
+        <h2>Fasten your car by 200km/hr in BGMI</h2>
+        <p>
+              Increase your car speed  in one click . 
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon"><i class="fa fa-3x fa-battery-full"></i></div>
+      <div class="content">
+        <h2>Quality Assurance</h2>
+        <p>
+         1000% secured 1000% free
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div id="how-it-works">
+     <iframe
+      id="video"
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/3T2N5UoEG_w"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+  
+  <div id="pricing">
+     <div class="card">
+      <h2>One Month Subscription</h2>
+      <strong>$600</strong>
+      <p>Popularity.</p>
+      <p>Followers.</p>
+      <p>100 UC.</p>
+      <p>Extra 20% dicount on next Purchase.</p>
+      <button>Select</button>
+    </div>
+    
+    <div class="card">
+      <h2>Three Month Subscription</h2>
+      <strong>$900</strong>
+      <p>Popularity.</p>
+      <p>Followers.</p>
+      <p>400 UC.</p>
+      <p>Extra 40% dicount on next Purchase.</p>
+      <button>Select</button>
+    </div>
+    
+    <div class="card">
+      <h2>ONE YEAR Subscription</h2>
+      <strong>$1200</strong>
+     <p>Popularity.</p>
+      <p>Followers.</p>
+      <p>1000 uc </p>
+      <p>Extra 80% dicount on next Purchase.</p>
+      <button>Select</button>
+    </div>
+  </div>
+ 
+  <hr>
+  <h2>MemberShip</h2>
+  <div class="container">
+		<form action="" method="get">
+			<h1  style="text-align: center" class="main_heading">Payment form</h1>
+			<h2 style="text-align:center; hight:50% ;width:100%;">Contact Information</h2>
+			<p>Name:*<input type="text" name="name" required></p>
+			<fieldset>
+				<legend>Gender*</legend>
+				<p>
+					male*<input type="radio" name="gender" id="male" required>
+					Female*<input type="radio" name="gender" id="Female" required>
+				</p>
+			</fieldset>
+			<p>address:*<textarea placeholder="Enter Your Address" name="address" id="address" cols="100" rows="8">
+			</textarea>
+			</p>
+			<p>Email:*<input type="email" name="email" id="email"  required></p>
+			<p>Pin Code:*<input type="number" name="pin code" id="pin code" required></p>
+			<h2>Payment Information</h2>
+			<p>Card Type:
+				<select name="card-type" id="card-type">
+					<option value=">--select a card type--</option>
+					<option value="Visa">Visa</option>
+					<option value="Rupay">Rupay</option>
+					<option value="MasterCard">MasterCard</option>
+				</select>
+			</p>
+			<p>
+				card number<input type="number" name="card-number">
+			</p>
+			<p>
+				Expiration Date:<input type="date" name="exp-date" id="exp-date">
+			</p>
+			<p>CVV <input type="password" name="cvv" id="cvv"></p>
+			<input type="Submit" value="Pay Now">
+		</form>
+		</div>
+  <hr>
+  <aside>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition, showError);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+</script>
+
+
+  </aside>
+  <footer>
+     <ul>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Terms</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <p>Copyright 2021, Ankit Majee</p>
+  </footer>
+</div>
+</body>
+</html>
+
+
+
+
+
